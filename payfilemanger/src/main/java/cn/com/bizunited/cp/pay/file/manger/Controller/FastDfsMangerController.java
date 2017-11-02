@@ -28,9 +28,6 @@ import java.util.Map;
 public class FastDfsMangerController {
 
 
-    private final static Logger logger = LoggerFactory.getLogger(FastDfsMangerController.class);
-
-
     @RequestMapping("/upload")
     public ModelAndView addUser(@RequestParam("fileName") CommonsMultipartFile[] files,
                                 HttpServletRequest request, HttpServletResponse response){
@@ -42,10 +39,8 @@ public class FastDfsMangerController {
             String msg = (String) retMap.get("msg");
 
             if ("0000".equals(code)){
-                logger.info("文件上传成功");
                 //TODO:将上传文件的路径保存到mysql数据库
             }else {
-                logger.info("文件上传失败");
             }
             mv.addObject("group",group);
             mv.addObject("msg",msg);
@@ -76,10 +71,8 @@ public class FastDfsMangerController {
              */
             byte[] b = storageClient.download_file(group, downname);
             if (b == null) {
-                logger.error("Error1 : file not Found!");
                 response.getWriter().write("Error1 : file not Found!");
             } else {
-                logger.info("下载文件..");
                 downname = new String(downname.getBytes("utf-8"), "ISO8859-1");
                 response.setHeader("Content-Disposition", "attachment;fileName=" + downname);
                 OutputStream out = response.getOutputStream();
