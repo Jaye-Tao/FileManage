@@ -217,5 +217,15 @@
     <orderEntry type="library" name="Maven: org.fusesource.hawtbuf:hawtbuf:1.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-net:commons-net:3.1" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
