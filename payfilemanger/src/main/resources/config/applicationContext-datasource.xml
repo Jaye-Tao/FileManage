@@ -57,6 +57,6 @@
 		<property name="logAbandoned" value="${druid.logAbandoned}" />
 		<!-- 监控数据库 -->
 		<!-- <property name="filters" value="stat" /> -->
-		<property name="filters" value="${druid.filters}" />
+		<!--<property name="filters" value="${druid.filters}" />-->
 	</bean>
 </beans>
